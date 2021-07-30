@@ -1,0 +1,15 @@
+@import '../../main.scss';
+
+.footer{
+    background:$mint;
+    min-height: 30rem;
+    position: relative;
+    margin-top: 2rem;
+    padding: 2rem 0;
+
+    .socials__wrapper{
+        @include FlexEvenly();
+        // background: red;
+    }
+
+}

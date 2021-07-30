@@ -6,7 +6,7 @@ export const Social = ({link,title, children}) => {
             href={link}
             title={ title}
             target="_blank"
-            rel="noreferer noopener"
+            rel="noreferer noopener noreferrer"
             className={styles.social__item}
         >
             { children}
