@@ -1,11 +1,11 @@
 import React from 'react';
-import styles from './City';
+// import styles from './City';
 
 
 
 export const City = () => {
     return (
-        <article className="silver">
+        <article >
           <div>
             <h1> {/* pierwszy blok */ }
               {/* nazwa miasta -> city */}
@@ -34,7 +34,7 @@ export const City = () => {
               Strefa czasowa :
               <br/>
               {/* time zone - strefa czasowa / przesuniecie w sekundach od UTC */}
-              - 28 800 s -> 8h
+              - 28 800 s to jest to samo co  8h
             </p>
           </div>
           <hr/>

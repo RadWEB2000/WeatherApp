@@ -1,4 +1,6 @@
 export const resultArray = {
+    lat:'',
+    lng:'',
     city:'Warsaw',
     zipCode:'00-000',
     id:'0',

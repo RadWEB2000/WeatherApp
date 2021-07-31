@@ -14,7 +14,7 @@
     $green-midnight:hsl(188,56,23);
     $grey-cultured:hsl(210,16,93);
     $grey-gainsboro:hsl(210,14,89);
-    $gunmetal:hsl(218,23,21);
+    $gunmetal:hsl(218, 23%, 21%);
     $indigo-persian:hsl(271,85,23);
     $isabel:hsl(20,25,95);
     $isabel-dark:hsl(12,38,92);
@@ -100,6 +100,11 @@
 
 .gold{
     background: gold;
+}
+
+.height{
+    height: 70vh;
+    background: lime;
 }
 // 
 

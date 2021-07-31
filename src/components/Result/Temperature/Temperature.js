@@ -2,7 +2,7 @@ import React from 'react';
 
 export const Temperature = () => {
     return (
-         <article className="gold">
+         <article>
           <div>
             <p>
               Temperatura minimalna {/* Minimal temperature */} 

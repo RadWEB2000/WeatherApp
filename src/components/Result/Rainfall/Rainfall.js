@@ -2,7 +2,7 @@ import React from 'react';
 
 export const Rainfall = () => {
     return (
-         <article className="silver">
+         <article >
         <div>
           <p>
               Prędkość wiatru {/* wind.speed.value */}
