@@ -19,9 +19,9 @@ export const Footer = () => (
             )}
         </div>
         <div className={styles.informations__wrapper}>
-            {list.informations.map((item) => <div>
+            {list.informations.map((item) => <div className={styles.informations__wrapper__item}>
                 {item.icon}
-                <p>
+                <p className={styles.informations__wrapper__item__name}>
                     {item.value}
                 </p>
             </div>
