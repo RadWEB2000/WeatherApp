@@ -1,60 +1,42 @@
 import React from 'react';
-// import styles from './City';
+import styles from './City.module.scss';
 
 
 
 export const City = () => {
-    return (
-        <article >
-          <div>
-            <h1> {/* pierwszy blok */ }
-              {/* nazwa miasta -> city */}
-              Warszawa
-            </h1>
-            <br/>
-            <b>
-              {/* kod pocztowy -> zip code */}
-              00-000
-            </b>
-
-            <p>
-              {/* id miasta -> id */}
-              id = 0
-            </p>
-          </div>
-          <hr/>
-          <div>
-            <p>
-              {/* kod kraju -> zip country code */}
-              zip-country cod:
-              <br/>
-              US
-            </p>
-            <p>
-              Strefa czasowa :
-              <br/>
-              {/* time zone - strefa czasowa / przesuniecie w sekundach od UTC */}
-              - 28 800 s to jest to samo co  8h
-            </p>
-          </div>
-          <hr/>
-          <div>
-            <span>
-              Czas wschodu słońca
-              <br/>
-              {/*ikona słońca  --- sunrise time*/}
-              2020-01-07T15:22:59
-            </span>
-
-            <span>
-              Czas zachodu słońca
-              <br/>
-              {/*ikona księżyca  --- sunset time*/}
-              2020-01-08T01:05:37
-            </span>
-          </div>
-
-
+  return (
+    <article className={styles.city__wrapper}>
+          <h1 className={styles.city__wrapper__title}>
+            Warszawa
+          </h1>
+          <section className={styles.city__wrapper__item}>
+            <div className={styles.city__wrapper__item__containter}>
+              <b className={styles.city__wrapper__item__containter__title}>Zip code</b>
+              <p className={styles.city__wrapper__item__containter__text}>00 - 000</p>
+            </div>
+            <div className={styles.city__wrapper__item__containter}>
+              <b className={styles.city__wrapper__item__containter__title}>City id</b>
+              <p className={styles.city__wrapper__item__containter__text}>0</p>
+            </div>
+            <div className={styles.city__wrapper__item__containter}>
+              <b className={styles.city__wrapper__item__containter__title}>Zip country code</b>
+              <p className={styles.city__wrapper__item__containter__text}>PL</p>
+            </div>
+          </section>
+          <section className={styles.city__wrapper__item}>
+              <div className={styles.city__wrapper__item__containter}>
+                <b className={styles.city__wrapper__item__containter__title}>Timezone</b>
+                <p className={styles.city__wrapper__item__containter__text}>28800s</p>
+              </div>
+              <div className={styles.city__wrapper__item__containter}>
+                <b className={styles.city__wrapper__item__containter__title}>Sunrise time</b>
+                <p className={styles.city__wrapper__item__containter__text}>2020-01-07T15:22:59</p>
+              </div>
+              <div className={styles.city__wrapper__item__containter}>
+                <b className={styles.city__wrapper__item__containter__title}>Sunset time</b>
+                <p className={styles.city__wrapper__item__containter__text}>2020-01-08T01:05:37</p>
+              </div>
+            </section>
         </article>
     )
 }
