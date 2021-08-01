@@ -1,6 +1,6 @@
 @import '../../../main.scss';
 
-.temp {
+.rain {
     cursor: default;
     margin: .2rem 0;
 
@@ -48,7 +48,7 @@
 
 @media only screen {
     @media (max-width:700px) {
-        .temp {
+        .rain {
             margin: 2rem 0;
 
 
