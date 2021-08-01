@@ -1,5 +1,6 @@
 import React from 'react';
-import styles from './Temperature.module.scss';
+import styles from '../Result.module.scss';
+
 export const Temperature = () => {
   return (
         <article className={styles.temp}>

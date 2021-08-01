@@ -1,6 +1,5 @@
 import React from 'react';
-import styles from './City.module.scss';
-
+import styles from '../Result.module.scss';
 
 
 export const City = () => {

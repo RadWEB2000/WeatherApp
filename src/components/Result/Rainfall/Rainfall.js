@@ -1,6 +1,7 @@
 import React from 'react';
 import { FiSun as SunIcon } from "react-icons/fi";
-import styles from './Rainfall.module.scss';
+import styles from '../Result.module.scss';
+
 
 
 export const Rainfall = () => {

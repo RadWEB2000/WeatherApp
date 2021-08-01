@@ -1,0 +1,121 @@
+@import '../../main.scss';
+
+
+
+.city,
+.temp,
+.rain {
+    cursor: default;
+    margin: 2rem 0;
+
+    &__title {
+        @include Flex();
+        color: $turquise;
+
+        font: {
+            size: 5rem;
+            weight: 200;
+        }
+
+        letter-spacing: .3em;
+        margin: 1rem 0;
+        text-shadow: 0 0 2rem $cyan-light,
+        0 0 2rem $turquise;
+    }
+
+    &__title::selection {
+        background: $cyan-light;
+        color: $cadet-space;
+    }
+
+    &__wrapper {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        height: auto;
+        margin: 0.5rem auto;
+        min-height: 10rem;
+        text-align: center;
+        width: 95%;
+
+        &__item {
+            @include FlexColumn();
+            @include FlexEvenly();
+
+            &__title {
+                color: $yellow-napies;
+                font-size: 2rem;
+                opacity: 0.7;
+            }
+
+            &__title::selection {
+                background: $cadet-space;
+                color: $cyan-light;
+            }
+
+            &__text {
+                color: $cyan-light;
+                font-size: 2.2rem;
+            }
+
+            &__text::selection {
+                background: $cadet-space;
+                color: $yellow-napies;
+            }
+        }
+    }
+}
+
+.city__wrapper {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.temp__wrapper {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.rain__wrapper {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+
+
+
+
+
+
+
+
+@media only screen {
+    @media (max-width:700px) {
+
+        .city,
+        .temp,
+        .rain {
+            margin: 2rem 0;
+
+
+            &__wrapper {
+                grid-template-columns: repeat(1, 1fr);
+                margin: 0.1rem auto;
+                width: 90%;
+                overflow-x: hidden;
+
+                &__item {
+                    margin: .1rem 0;
+
+                    &__title {
+                        font-size: 1.5rem;
+                    }
+
+                    &__text {
+                        font-size: 1.7rem;
+                    }
+
+                }
+            }
+
+
+        }
+
+    }
+}
