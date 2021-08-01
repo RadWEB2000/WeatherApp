@@ -1,6 +1,9 @@
 @import '../../main.scss';
 
 
+.result{
+    padding: 10rem 0;
+}
 
 .city,
 .temp,
@@ -43,7 +46,8 @@
 
             &__title {
                 color: $yellow-napies;
-                font-size: 2rem;
+                font-size: 1.8rem;
+                font-weight: 300;
                 opacity: 0.7;
             }
 
@@ -55,6 +59,7 @@
             &__text {
                 color: $cyan-light;
                 font-size: 2.2rem;
+                font-weight: 600;
             }
 
             &__text::selection {
@@ -69,18 +74,15 @@
     grid-template-columns: repeat(3, 1fr);
 }
 
-.temp__wrapper {
-    grid-template-columns: repeat(2, 1fr);
-}
-
+.temp__wrapper,
 .rain__wrapper {
     grid-template-columns: repeat(2, 1fr);
 }
 
-
-
-
-
+sup::selection {
+    background: $cadet-space;
+    color: $yellow-napies;
+}
 
 
 
@@ -91,14 +93,22 @@
         .city,
         .temp,
         .rain {
-            margin: 2rem 0;
+            margin: 1rem 0;
 
+            &__title {
+                font: {
+                    size: 2.5rem;
+                }
+
+                letter-spacing: .1em;
+                margin: .45rem 0;
+            }
 
             &__wrapper {
                 grid-template-columns: repeat(1, 1fr);
                 margin: 0.1rem auto;
-                width: 90%;
                 overflow-x: hidden;
+                width: 100%;
 
                 &__item {
                     margin: .1rem 0;
@@ -108,7 +118,8 @@
                     }
 
                     &__text {
-                        font-size: 1.7rem;
+                        font-size: 1.65rem;
+                        font-weight: 400;
                     }
 
                 }
