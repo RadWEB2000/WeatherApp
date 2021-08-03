@@ -120,6 +120,11 @@
     position: absolute;
 }
 
+*::selection{
+        background:$white-cultured;
+        color:$gunmetal;
+}
+
 ::-webkit-scrollbar{
     width:0;
 }
@@ -130,8 +135,9 @@ html{
 
 body{
     @include FontMontserrat();
-    background: $gunmetal;
+    background: $white-cultured;
     background-attachment: fixed;
+    color: $gunmetal;
     overflow-x: hidden;
     width: 100vw;
 

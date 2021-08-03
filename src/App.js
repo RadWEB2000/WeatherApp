@@ -1,17 +1,20 @@
 import React from 'react';
 import './main.scss';
-import { Location } from './components/Location/Location';
-import { Result } from './components/Result/Result';
-import { Footer } from './components/Footer/Footer';
+import { Nav } from './components/Nav/Nav';
+import {Home} from './components/Home/Home';
 
-function App() {
-  return (
-    <>
-      <Location/>
-      <Result/>
-      <Footer/>
-    </>
-  );
+
+
+
+class App extends React.Component{
+	render(){
+		return(
+			<>
+				<Nav/>
+				<Home/>
+			</>
+		)
+	}
 }
 
 export default App;
