@@ -1,6 +1,6 @@
+import { GoogleMap, LoadScript, Marker } from '@react-google-maps/api';
 import React, { Component } from 'react';
 import { GoSearch as SearchIcon } from "react-icons/go";
-import { GoogleMap, LoadScript, Marker } from '@react-google-maps/api';
 import styles from './Home.module.scss';
 
 const weatherKey = '33225bdb156c2228112220047c76d150';
@@ -41,7 +41,6 @@ export class Home extends Component {
             .then(res => res.json())
             .then(data => {
                 console.log(data);
-                const time = new Date().toLocaleString();
                 
                 this.setState({
                     clouds:data.clouds.all,
@@ -49,7 +48,7 @@ export class Home extends Component {
                     description:data.weather[0].description,
                     humidity: data.main.humidity,
                     icon: data.weather[0].icon,
-                    id: data.sys.id,
+                    id: data.id,
                     lat: data.coord.lat,
                     lng: data.coord.lon,
                     name: this.refs.city.value,
@@ -142,11 +141,14 @@ export class Home extends Component {
                             <p className={styles.city__item__value}> {this.state.country}</p>
                         </section>   
                         <section className={styles.city__item}>
+                            <b className={styles.city__item__name}>Short weahter</b>
+                            <p className={styles.city__item__value}> {this.state.description}</p>
+                        </section>   
+                        <section className={styles.city__item}>
                             <b className={styles.city__item__name}>City id</b>
                             <p className={styles.city__item__value}>{this.state.id}</p>
                         </section>   
                     </article>
-
                     <article className={styles.time}>
                         <section className={styles.time__item}>
                             <b className={styles.time__item__name}>Sunrise</b>
@@ -161,7 +163,6 @@ export class Home extends Component {
                             <p className={styles.time__item__value}> {sunsetTime}</p>
                         </section>   
                     </article>
-                    
                      <article className={styles.temp}>
                         <section className={styles.temp__item}>
                             <b className={styles.temp__item__name}>Temperature</b>
@@ -180,7 +181,6 @@ export class Home extends Component {
                             <p className={styles.temp__item__value}>{this.state.tempMax}°C</p>
                         </section>  
                     </article>
-                    
                     <article className={styles.clouds}>
                         <section className={styles.clouds__item}>
                             <b className={styles.clouds__item__name}>Clouds</b>
@@ -191,14 +191,6 @@ export class Home extends Component {
                             <p className={styles.clouds__item__value}> {this.state.visibility}%</p>
                         </section>  
                     </article>
-                    
-                    <article className={styles.rain}>
-                        <section className={styles.rain__item}>
-                            <b className={styles.rain__item__name}>The volume of rainfall during 1 hour</b>
-                            <p className={styles.rain__item__value}>1m<sup>3</sup></p>
-                        </section>   
-                    </article>
-                    
                     <article className={styles.wind}>
                         <section className={styles.wind__item}>
                             <b className={styles.wind__item__name}>Wind speed</b>
